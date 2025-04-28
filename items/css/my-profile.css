@@ -2,1425 +2,1489 @@
 /*ساخت نوار بالای سایت */
 .navar {
 
-    display: grid;
-    grid-template-columns: repeat(5,100px);
-    direction: rtl;
-    height: 65px ;
-    /* 
-     direction: rtl;  ترتیب محتوا از راست به چپ 
-     text-align: left;  متن به چپ تراز می‌شود 
-    */
+  display: grid;
+  grid-template-columns: repeat(5,100px);
+  direction: rtl;
+  height: 65px ;
+  /* 
+   direction: rtl;  ترتیب محتوا از راست به چپ 
+   text-align: left;  متن به چپ تراز می‌شود 
+  */
+  
+  position:fixed;
+  left: 14px;
+  width: 1500px;
+  top: 5px;
+  z-index: 1000;
+  
+  background: rgba(210, 254, 228, 0.433);
+  backdrop-filter: blur(10px);
+  /*text-align: right;*/
+  direction: rtl;
+  border-radius: 8px;
+
+} 
+
+
+/*ساخت دارک مود*/
+
+.div-moon {
+
+
+  position:fixed;
+  top: 75px;
+  text-align: left;
+  margin-left: 15px;
+  background-color: rgba(210, 254, 228, 0.433);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  padding: 3px 3px 0px 3px;
+  border: solid 1px rgba(121, 121, 121, 0);
+  
+
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+#moonButton {
+
+  display: inline-block;
+  background-color: #00000000;
+  border: solid 0px;
+  padding: 0 0 0px 0;
+  width: 35px;
+  height: 35px;
+
+  
+
+}
+
+.div-moon:hover {
+
+  background-color: rgba(41, 50, 45, 0.614);
+  
+
+}
+
+#moon {
+
+  
+  display: block;
+  margin-bottom: 1px;
+  margin-left: 2px;
+  fill: #5b79ff;
+
+  transition:all 0.3s;
+
+}
+
+#moon:hover {
+
+  fill: #ffcf33;
+
+}
+
+#sun {
+
+  margin-left: 2px;
+  margin-bottom: 1px;
+  display: block;
+  fill: #ffcf33;
+
+  transition:all 0.3s;
+
+}
+
+#sun:hover {
+
+  display: block;
+  fill: #3b5fff;
+
+  
+
+}
+
+.menu {
+
+  display: inline-block;
+  margin-top: 5px;
+  margin-right: 0px;
+  width: 35px;
+  fill: #caffe6;
+
+  transition: 0.2s linear;
+
+}
+
+.menu:hover {
+
+  fill: #06877e;
+
+}
+
+.menu:active {
+
+  transform: scale(0.9);
+
+}
+
+.buttonMenu{
+
+  display: inline-block;
+  padding: 0 0 0 10px;
+  background-color: #ffffff00;
+  border: solid rgba(255, 255, 255, 0);
+
+}
+
+#menuOn {
+
+  
+  position: fixed; 
+  top: 90px; 
+  right: 30px; 
+  background-color: rgba(210, 254, 228, 0.27);
+  backdrop-filter: blur(15px);
+  padding: 15px 10px 20px 10px; 
+  border-radius: 10px;
+  border:solid 2px rgba(255, 255, 255, 0.395);
+  text-align: right;
+
+  transition:all 0.2s ease;
+
+  z-index: 1001;
+
+}
+
+.creatSentence {
+
+  margin-top: 15px; 
+  color: #ffffff;
+  border-top: solid 4px #06877e;
+  width: 0px;
+/*border-top-style:*/
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  padding-top: 3px;
+  transition: 0.25s;
+  
+}
+
+.creatSentence:hover {
+
+  width: 76px;
+
+}
+
+.creatHome {
+
+  margin-top: 15px; 
+  color: #ffffff;
+  border-top: solid 4px #06877e;
+  width: 0px;
+/*border-top-style:*/
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  padding-top: 3px;
+  transition: 0.25s;
+
+}
+
+.creatHome:hover {
+
+  width: 48px;
+
+}
+
+.about {
+
+  display: block;
+  margin-bottom: 10px;
+  font-size: 23px;
+  text-decoration: none;
+  color: #ecfff6;
+  transition: 0.5s;
+  padding: 5px 10px 5px 90px;
+  border-radius: 3px;
+
+}
+
+.about:hover {
+
+  background-color: rgba(87, 121, 101, 0.229);
+  color: #fdff97;
+
+}
+
+/*ساخت خوش آمد */
+.welcomBox {
+
+  width: 650px;
+  margin: 150px auto;
+  background-color: rgba(50, 50, 50, 0.212);
+  backdrop-filter: blur(15px);
+  border-radius: 50px;
+  border: solid 1px;
+  border-color: rgba(255, 255, 255, 0.399);
+  padding: 0px 0px 0px 80px;
+  font-family:monospace;
+  text-align: center;
+
+}
+
+.welcom {
+
+  text-align: center;
+  font-size: 43px;
+  font-weight:bold;
+  padding: 0 0 0 20px;
+ 
+  /*هنوز این رو یاد نگرفتم*/
+  font-family: monospace;
+  white-space: nowrap; /* جلوگیری از شکستن خط */
+  overflow: hidden; /* مخفی کردن متن اضافه */
+  max-width: 0px;/* شروع انیمیشن با عرض صفر */
+  border-right: 5px solid white; /* نشانگر تایپ */  
+  animation: typing 4s steps(23, end) forwards, blink 1s linear infinite ;
+  transition: 1s;
+/*هنوز این رو یاد نگرفتم*/
+  
+}
+
+/*هنوز این رو یاد نگرفتم*/
+
+@keyframes typing {
+  from {
+    max-width: 0px; /* شروع انیمیشن از عرض صفر */
+  }
+  to {
+    max-width: calc(94% - 20px); /* تمام متن نمایش داده شود */
+  }
+}
+
+/* انیمیشن چشمک‌زن برای نشانگر تایپ */
+@keyframes blink {
+  from, to {border-color: transparent; /* نشانگر مخفی شود */
+  }
+  50% {
+    border-color: white; /* نشانگر سفید شود */
+  }
+
+}
+/*هنوز این رو یاد نگرفتم*/
+
+.imgP {
+  
+  margin-top: 80px;
+  border-radius: 75px;
+  height: 150px;
+  width: 150px;
+  
+}
+
+.imgP:hover{
+
+  animation: bounce 2s infinite;
+  
+}
+
+@font-face {
+  font-family: iranSans;
+  src: url(./items/fonts/Iranian\ Sans.ttf);
+}
+
+body {
+
+  background:url("../img/imgBackgraond/tree.jpg") ;
+
+  /*background: linear-gradient(135deg, #1281f8, #042ba2);*/
+  font-family: "Trebuchet MS" ,"iranSans";
+  text-decoration: none;
+  background-size: cover;
+  text-align: center;
+  color: white;
+
+  transition: background 1s ease;
+  
+  
+}
+
+.myProfile {
+
+  margin: 100px auto;
+  max-width: 550px;
+  max-height: 800px;
+  border: solid 5px white;
+  border-radius: 35px;
+
+}
+
+.name {
+
+  margin-top: 30px;
+  font-size: 35px;
+
+}
+
+.channel {
+
+  margin-top: 30px;
+  font-size: 18px;
+}
+
+.firstGlass {
+
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.186);
+  border: solid 1px rgba(225, 225, 225, 0.374);
+  margin: 80px 100px 0px 100px;
+  padding: 28px 10px 30px 10px;
+  text-align: center;
+}
+
+.fab.fa-instagram {
+
+  margin: 0 3px 3px 0 ;
+  font-size: 20px;
+  text-decoration: none;
+
+}
+
+.instagram {
+  z-index: 1000;
+  margin: 100px 30px 40px 40px;
+  display: block;
+  font-size: 20px;
+  text-align: center;
+  color: rgb(0, 72, 255);
+  background-color: white;
+  padding: 15px 40px;
+  border-radius: 15px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  transition: 0.5s ease;
+
+}
+
+.instagram:hover {
+  color: white;
+  background-color: rgb(52, 23, 237);
+  transform: scale(1.05);
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.glassBox {
+
+  margin-left: 100px;
+  display: grid;
+  grid-template-columns: repeat(3,200px);
+  gap: 250px;
+  text-align: left;
+  color: rgb(42, 153, 233);
+}
+
+.hWitht {
+
+  color: rgb(255, 255, 255);
+  margin: 0 0 20px 0 ;
+
+}
+
+.style {
+
+  width: 300px;
+  padding: 20px 50px 30px 50px;
+  margin: 0 0 30px 0px;
+  font-size: 18px;
+  background: rgba(0, 0, 0, 0.138);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
     
-    position:fixed;
-    left: 14px;
-    width: 1500px;
-    top: 5px;
-    z-index: 1000;
+  border: solid 1px rgba(152, 152, 152, 0.274);
+
+  transition: 0.3s ease;
+
+}
+
+.style:hover {
+
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.438);
+   transform: scale(1.02);
     
-    background: rgba(210, 254, 228, 0.433);
-    backdrop-filter: blur(10px);
-    /*text-align: right;*/
-    direction: rtl;
-    border-radius: 8px;
-  
-  } 
-  
-  
-  /*ساخت دارک مود*/
-  
-  .div-moon {
-  
-  
-    position:fixed;
-    top: 75px;
-    text-align: left;
-    margin-left: 15px;
-    background-color: rgba(210, 254, 228, 0.433);
-    backdrop-filter: blur(5px);
-    border-radius: 10px;
-    padding: 3px 3px 0px 3px;
-    border: solid 1px rgba(121, 121, 121, 0);
+}
+
+.h2Margin {
+
+  margin: 0 0 30px 0;
+  color: rgba(255, 255, 255, 0.186);
     
+}
+
+.px {
+
+  color: rgb(255, 166, 0);
+
+}
+
+.scrool {
+
+  width: 400px;
+  height: 240px;
   
-    transition: 0.3s;
-    z-index: 1000;
-  }
+  display: inline-block;
+  background-color: #000;
+  padding: 3px;
   
-  #moonButton {
+
+}
+
+.GlassCard {
+
+  position: absolute;
+  top: -50px;
+  right: 140px;
+  border-radius: 50px 40px 50px 40px;
   
-    display: inline-block;
-    background-color: #00000000;
-    border: solid 0px;
-    padding: 0 0 0px 0;
-    width: 35px;
-    height: 35px;
+  transition: 0.3s;
+}
+
+.GlassCard:hover {
+
+  transform: scale(1.03);
+
+}
+
+.card {
+
+  width: 400px;
+  height: 240px;
   
+  font-size: 18px;
+  background-color: rgba(21, 89, 125, 0.462);
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(3px);
+  
+  border: solid 1px rgba(104, 137, 247, 0);
+  
+  transition: 0.3s ease;
+
+}
+.card:hover {
+
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.349);
+  transform: scale(1.02);
+
+}
+
+.imgh {
+
+  height: 50px;
+  display: grid;
+  grid-template-columns: repeat(2,330px);
+  
+
+}
+
+.h5Witht {
+
+  display: inline-block;
+  width: 95px ;
+  margin: 40PX 0 0 30px ;
+  color:white;
+  
+}
+
+.blu {
+
+  width: 90px;
+  height: 90px;
+  margin: 0px 0px 0 0px;
+  fill: #ffffffe4;
+
+}
+  
+@import url('https://fonts.cdnfonts.com/css/gilroy-bold');
+.numCard {
+
+  font-size: 25px;
+  color: #fff;
+  margin: 100px 0 0 32px;
+  font-family: 'Gilroy-Regular', sans-serif;
+
+}
+
+.endLine {
+
+  display: grid;
+  grid-template-columns: repeat(2,200px);
+  
+}
+
+.myName {
+
+  color: #fff;
+  margin: 25px 0 0 30px;
+  width: 138px;
+
+}
+
+.myage {
     
+  color: #fff;
+
+}
+
+.copyPassword {
+
+  position: relative;
   
-  }
+
+  width: 400px ;
+  margin-top: 20px;
+  background-color: rgba(21, 89, 125, 0.281);
+  border: solid 2px rgba(159, 159, 159, 0.363);
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+
+  transition: 0.3s;
+  z-index: 2;
+
+}
+
+.showNummberCard {
+
+  position: relative;
+  top: -5px;
   
-  .div-moon:hover {
+  right: -10px;
+  background-color: rgb(10, 118, 177);
+  width: 380PX;
+  border-radius: 0 0 15px 15px;
   
-    background-color: rgba(41, 50, 45, 0.614);
-    
+  height: 30PX;
   
-  }
+  transition: 0.3s;
+
+}
+
+.showNummberCard:hover  {
+
+  height: 65PX;
+
+}
+
+.passIcon {
+
+  margin-left: 58px;
+ top: -49px;
+
+}
+
+
+
+/*ساخت صفحه ارت ها*/
+
+#artMenu {
   
-  #moon {
+  margin: 80px 10px 15px 10px;
+  background-color: rgba(255, 255, 255, 0.142);
+  backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: solid 1px rgba(255, 255, 255, 0.46);
+
+  padding: 30px 0 200px 0 ;
+
+}
+
+.art {
+
   
-    
-    display: block;
-    margin-bottom: 1px;
-    margin-left: 2px;
-    fill: #5b79ff;
+  display: inline-block;
+  margin-top: 150px;
+  margin-bottom: 100px;
+  margin-left: 30px;
+  color: #17a9a0;
+  font-size: 100px;
+  font-weight: bold;
   
-    transition:all 0.3s;
-  
-  }
-  
-  #moon:hover {
-  
-    fill: #ff6666;
-  
-  }
-  
-  #sun {
-  
-    margin-left: 2px;
-    margin-bottom: 1px;
-    display: block;
-    fill: #ff6666;
-  
-    transition:all 0.3s;
-  
-  }
-  
-  #sun:hover {
-  
-    display: block;
-    fill: #3b5fff;
-  
-    
-  
-  }
-  
-  .menu {
-  
-    display: inline-block;
-    margin-top: 5px;
-    margin-right: 0px;
-    width: 35px;
-    fill: #caffe6;
-  
-    transition: 0.2s linear;
-  
-  }
-  
-  .menu:hover {
-  
-    fill: #06877e;
-  
-  }
-  
-  .menu:active {
-  
-    transform: scale(0.9);
-  
-  }
-  
-  .buttonMenu{
-  
-    display: inline-block;
-    padding: 0 0 0 10px;
-    background-color: #ffffff00;
-    border: solid rgba(255, 255, 255, 0);
-  
-  }
-  
-  #menuOn {
-  
-    
-    position: fixed; 
-    top: 90px; 
-    right: 30px; 
-    background-color: rgba(210, 254, 228, 0.27);
-    backdrop-filter: blur(15px);
-    padding: 15px 10px 20px 10px; 
-    border-radius: 10px;
-    border:solid 2px rgba(255, 255, 255, 0.395);
-    text-align: right;
-  
-    transition:all 0.2s ease;
-  
-    z-index: 1001;
-  
-  }
-  
-  .creatSentence {
-  
-    margin-top: 15px; 
-    color: #ffffff;
-    border-top: solid 4px #06877e;
-    width: 0px;
-  /*border-top-style:*/
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
-    padding-top: 3px;
-    transition: 0.25s;
-    
-  }
-  
-  .creatSentence:hover {
-  
-    width: 76px;
-  
-  }
-  
-  .creatHome {
-  
-    margin-top: 15px; 
-    color: #ffffff;
-    border-top: solid 4px #06877e;
-    width: 0px;
-  /*border-top-style:*/
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
-    padding-top: 3px;
-    transition: 0.25s;
-  
-  }
-  
-  .creatHome:hover {
-  
-    width: 48px;
-  
-  }
-  
-  .about {
-  
-    display: block;
-    margin-bottom: 10px;
-    font-size: 23px;
-    text-decoration: none;
-    color: #ecfff6;
-    transition: 0.5s;
-    padding: 5px 10px 5px 90px;
-    border-radius: 3px;
-  
-  }
-  
-  .about:hover {
-  
-    background-color: rgba(87, 121, 101, 0.229);
-    color: #fdff97;
-  
-  }
-  
-  /*ساخت خوش آمد */
-  .welcomBox {
-  
-    width: 650px;
-    margin: 150px auto;
-    background-color: rgba(50, 50, 50, 0.212);
-    backdrop-filter: blur(15px);
-    border-radius: 50px;
-    border: solid 1px;
-    border-color: rgba(255, 255, 255, 0.399);
-    padding: 0px 0px 0px 80px;
-    font-family:monospace;
-    text-align: center;
-  
-  }
-  
-  .welcom {
-  
-    text-align: center;
-    font-size: 43px;
-    font-weight:bold;
-    padding: 0 0 0 20px;
-   
+  font-family: 'Gilroy-Regular', sans-serif;
+
     /*هنوز این رو یاد نگرفتم*/
     font-family: monospace;
     white-space: nowrap; /* جلوگیری از شکستن خط */
     overflow: hidden; /* مخفی کردن متن اضافه */
     max-width: 0px;/* شروع انیمیشن با عرض صفر */
-    border-right: 5px solid white; /* نشانگر تایپ */  
-    animation: typing 4s steps(23, end) forwards, blink 1s linear infinite ;
-    transition: 1s;
-  /*هنوز این رو یاد نگرفتم*/
+    border-right: 10px solid white; /* نشانگر تایپ */  
+    animation: typing 7s steps(23, end) forwards, blink 1.2s linear infinite ;
+    /*هنوز این رو یاد نگرفتم*/
     
-  }
-  
-  /*هنوز این رو یاد نگرفتم*/
-  
-  @keyframes typing {
-    from {
-      max-width: 0px; /* شروع انیمیشن از عرض صفر */
-    }
-    to {
-      max-width: calc(94% - 20px); /* تمام متن نمایش داده شود */
-    }
-  }
-  
-  /* انیمیشن چشمک‌زن برای نشانگر تایپ */
-  @keyframes blink {
-    from, to {border-color: transparent; /* نشانگر مخفی شود */
-    }
-    50% {
-      border-color: white; /* نشانگر سفید شود */
-    }
-  
-  }
-  /*هنوز این رو یاد نگرفتم*/
-  
-  .imgP {
-    
-    margin-top: 80px;
-    border-radius: 75px;
-    height: 150px;
-    width: 150px;
-    
-  }
-  
-  .imgP:hover{
-  
-    animation: bounce 2s infinite;
-    
-  }
-  
-  @font-face {
-    font-family: iranSans;
-    src: url(./items/fonts/Iranian\ Sans.ttf);
-  }
-  
-  body {
-  
-    background:url("tree.jpg") ;
-  
-    /*background: linear-gradient(135deg, #1281f8, #042ba2);*/
-    font-family: "Trebuchet MS" ,"iranSans";
-    text-decoration: none;
-    background-size: cover;
-    text-align: center;
-    color: white;
-  
-    transition: background 1s ease;
-    
-    
-  }
-  
-  .myProfile {
-  
-    margin: 100px auto;
-    max-width: 550px;
-    max-height: 800px;
-    border: solid 5px white;
-    border-radius: 35px;
-  
-  }
-  
-  .name {
-  
-    margin-top: 30px;
-    font-size: 35px;
-  
-  }
-  
-  .channel {
-  
-    margin-top: 30px;
-    font-size: 18px;
-  }
-  
-  .firstGlass {
-  
-    color: rgb(255, 255, 255);
-    font-size: 18px;
-    background: rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.186);
-    border: solid 1px rgba(225, 225, 225, 0.374);
-    margin: 80px 100px 0px 100px;
-    padding: 28px 10px 30px 10px;
-    text-align: center;
-  }
-  
-  .fab.fa-instagram {
-  
-    margin: 0 3px 3px 0 ;
-    font-size: 20px;
-    text-decoration: none;
-  
-  }
-  
-  .instagram {
-    z-index: 1000;
-    margin: 100px 30px 40px 40px;
-    display: block;
-    font-size: 20px;
-    text-align: center;
-    color: rgb(0, 72, 255);
-    background-color: white;
-    padding: 15px 40px;
-    border-radius: 15px;
-    text-decoration: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  
-    transition: 0.5s ease;
-  
-  }
-  
-  .instagram:hover {
-    color: white;
-    background-color: rgb(52, 23, 237);
-    transform: scale(1.05);
-  }
-  
-  @keyframes bounce {
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-      transform: translateY(0);
-    }
-  
-    40% {
-      transform: translateY(-10px);
-    }
-    60% {
-      transform: translateY(-5px);
-    }
-  }
-  
-  .glassBox {
-  
-    margin-left: 100px;
-    display: grid;
-    grid-template-columns: repeat(3,200px);
-    gap: 250px;
-    text-align: left;
-    color: rgb(42, 153, 233);
-  }
-  
-  .hWitht {
-  
-    color: rgb(255, 255, 255);
-    margin: 0 0 20px 0 ;
-  
-  }
-  
-  .style {
-  
-    width: 300px;
-    padding: 20px 50px 30px 50px;
-    margin: 0 0 30px 0px;
-    font-size: 18px;
-    background: rgba(0, 0, 0, 0.138);
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-      
-    border: solid 1px rgba(152, 152, 152, 0.274);
-  
-    transition: 0.3s ease;
-  
-  }
-  
-  .style:hover {
-  
-    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.438);
-     transform: scale(1.02);
-      
-  }
-  
-  .h2Margin {
-  
-    margin: 0 0 30px 0;
-    color: rgba(255, 255, 255, 0.186);
-      
-  }
-  
-  .px {
-  
-    color: rgb(255, 166, 0);
-  
-  }
-  
-  .scrool {
-  
-    width: 400px;
-    height: 240px;
-    
-    display: inline-block;
-    background-color: #000;
-    padding: 3px;
-    
-  
-  }
-  
-  .GlassCard {
-  
-    position: absolute;
-    top: -50px;
-    right: 140px;
-    border-radius: 50px 40px 50px 40px;
-    
-    transition: 0.3s;
-  }
-  
-  .GlassCard:hover {
-  
-    transform: scale(1.03);
-  
-  }
-  
-  .card {
-  
-    width: 400px;
-    height: 240px;
-    
-    font-size: 18px;
-    background-color: rgba(21, 89, 125, 0.462);
-    border-radius: 20px;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(3px);
-    
-    border: solid 1px rgba(104, 137, 247, 0);
-    
-    transition: 0.3s ease;
-  
-  }
-  .card:hover {
-  
-    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.349);
-    transform: scale(1.02);
-  
-  }
-  
-  .imgh {
-  
-    height: 50px;
-    display: grid;
-    grid-template-columns: repeat(2,330px);
-    
-  
-  }
-  
-  .h5Witht {
-  
-    display: inline-block;
-    width: 95px ;
-    margin: 40PX 0 0 30px ;
-    color:white;
-    
-  }
-  
-  .blu {
-  
-    width: 90px;
-    height: 90px;
-    margin: 0px 0px 0 0px;
-    fill: #ffffffe4;
-  
-  }
-    
-  @import url('https://fonts.cdnfonts.com/css/gilroy-bold');
-  .numCard {
-  
-    font-size: 25px;
-    color: #fff;
-    margin: 100px 0 0 32px;
-    font-family: 'Gilroy-Regular', sans-serif;
-  
-  }
-  
-  .endLine {
-  
-    display: grid;
-    grid-template-columns: repeat(2,200px);
-    
-  }
-  
-  .myName {
-  
-    color: #fff;
-    margin: 25px 0 0 30px;
-    width: 138px;
-  
-  }
-  
-  .myage {
-      
-    color: #fff;
-  
-  }
-  
-  .copyPassword {
-  
-    position: relative;
-    
-  
-    width: 400px ;
-    margin-top: 20px;
-    background-color: rgba(21, 89, 125, 0.281);
-    border: solid 2px rgba(159, 159, 159, 0.363);
-    border-radius: 10px;
-    backdrop-filter: blur(5px);
-  
-    transition: 0.3s;
-    z-index: 2;
-  
-  }
-  
-  .showNummberCard {
-  
-    position: relative;
-    top: -5px;
-    
-    right: -10px;
-    background-color: rgb(10, 118, 177);
-    width: 380PX;
-    border-radius: 0 0 15px 15px;
-    
-    height: 30PX;
-    
-    transition: 0.3s;
-  
-  }
-  
-  .showNummberCard:hover  {
-  
-    height: 65PX;
-  
-  }
-  
-  .passIcon {
-  
-    margin-left: 58px;
-   top: -49px;
-  
-  }
-  
-  
-  
-  /*ساخت صفحه ارت ها*/
-  
-  #artMenu {
-    
-    margin: 80px 10px 15px 10px;
-    background-color: rgba(255, 255, 255, 0.142);
-    backdrop-filter: blur(20px);
-    border-radius: 10px;
-    border: solid 1px rgba(255, 255, 255, 0.46);
-  
-    padding: 30px 0 200px 0 ;
-  
-  }
-  
-  .art {
-  
-    
-    display: inline-block;
-    margin-top: 150px;
-    margin-bottom: 100px;
-    margin-left: 30px;
-    color: #17a9a0;
-    font-size: 100px;
-    font-weight: bold;
-    
-    font-family: 'Gilroy-Regular', sans-serif;
-  
-      /*هنوز این رو یاد نگرفتم*/
-      font-family: monospace;
-      white-space: nowrap; /* جلوگیری از شکستن خط */
-      overflow: hidden; /* مخفی کردن متن اضافه */
-      max-width: 0px;/* شروع انیمیشن با عرض صفر */
-      border-right: 10px solid white; /* نشانگر تایپ */  
-      animation: typing 7s steps(23, end) forwards, blink 1.2s linear infinite ;
-      /*هنوز این رو یاد نگرفتم*/
-      
-  }
-  
-  .command {
-  
-    display: inline-block;
-    font-size: 21px;
-    color: rgba(0, 0, 0, 0.459);
-  
-    /*transition:all 1s ;*/
-  
-  }
-  
-  .artBox {
-  
-    display: inline-block;
-    margin: 20px 10px 20px 10px ;
-    background-color: #fff;
-    border-radius: 7px 7px 12px 12px;
-    padding-bottom: 25px;
-    
-    transition: all 0.3s;
-  }
-  
-  .artBox:hover {
-  
-    transform:translateY(-5px); 
-    
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.534);
-  
-  }
-  
-  .artsImg {
-  
-    width: 340px;
-    border-radius: 7px 7px 0 0;
-    
-  }
-  
-  @font-face {
-    font-family: ubuntu;
-    src: url(/amozesh/items/fonts/Ubuntu-Light.ttf);
-  }
-  @font-face {
-    font-family: ubuntuMedium;
-    src: url(/amozesh/items/fonts/Ubuntu-Medium.ttf);
-  }
-  @font-face {
-    font-family: ubuntuBold;
-    src: url(/amozesh/items/fonts/Ubuntu-Bold.ttf);
-  }
-  
-  .textImg {
-  
-    font-family: 'ubuntuMedium', sans-serif;
-  
-    font-size: 20px;
-    margin: 15px 0 0 0;
-    color: black;
-  
-  }
-  
-  /* ساخت قسمت سوال */
-  
-  #sentenceMenu {
-  
-    margin: 80px 30px 15px 30px;
-    background-color: rgba(255, 255, 255, 0.142);
-    backdrop-filter: blur(20px);
-    border-radius: 10px;
-    border: solid 1px rgba(255, 255, 255, 0.46);
-  
-    padding: 30px 0 50px 0 ;
-  
-  }
-  
-  .inputBox {
-  
-    margin: 300px;
-    display:inline-block;
-    font-family:cursive;
-    padding: 40px 25px 25px 25px;
-    background-color:rgb(255, 254, 254);
-    border: solid 1px rgba(76, 76, 76, 0.41);
-    border-radius: 15px;
-    box-shadow: 0 8px 20px #52525277;
-    
-  }
-  
-  .h2-inputBox {
-  
-    margin: 10px 0 40px 8px;
-    text-align: left;
-    color: #000;
-    font-family: cursive;
-    font-size: 20px;
-  
-  }
-  
-  #in-the-inputBox {
-  
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px
-  
-  }
-  
-  @import url('https://fonts.cdnfonts.com/css/gilroy-bold');
-  
-  input::placeholder {
-  
-    color: #3a3a3a61;
-    
-  }
-  
-  #enterName {
-  
-    margin: 0 0 0px 0;
-    padding: 0 0 0 15px;
-    font-family:cursive;
-    font-weight:bold;
-    font-size: 15px;
-    width: 350px;
-    height: 45px;
-    text-align: left;
-    border-radius: 8px;
-    border: solid 0px rgb(50, 50, 255) ;
-    color: #000000;
-    background-color: #ffffff;
-    backdrop-filter: blur(10px);
-    
-    transition: 0.3s;
-  
-  }
-  
-  #enterName:hover {
-  
-    transform: translateY(-3px);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.445);
-  
-  }
-  
-  .makeSentence {
-  
-    margin-top: 80px;
-    color: rgb(255, 255, 255);
-    font-size: 18px;
-    background: rgba(198, 255, 244, 0.148);
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 4px 10px rgba(65, 65, 65, 0.253);
-    border: solid 1px rgba(29, 29, 29, 0.128);
-  
-  }
-  
-  .h2-sentence {
-  
-    margin: 30px;
-    font-size: 20px;
-    width: 300px;
-    color: #353535;
-  
-  }
-  
-  .botton {
-  
-    display: inline-block;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    text-align:center;
-    padding: 30px;
-    background-color: rgba(100, 99, 99, 0.212);
-    backdrop-filter: blur(30px);
-    border-radius: 15px;
-    border: solid 1px;
-    border-color: rgba(255, 255, 255, 0.399);
-    -webkit-backdrop-filter: blur(30px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.567);
-    
-  }
-  
-  .show {
-  
-    display:inline-block;
-    
-    background-color: rgb(48, 173, 63);
-    font-size: 25px;
-    padding: 15px;
-    color: #fff;
-    border-radius: 10px;
-    border: solid 0px rgb(255, 255, 255);
-    
-    transition: 0.3s;
-  
-  }
-  
-  .show:hover {
-  
-    background-color: #ffffff;
-    border: solid 0px rgb(255, 255, 255);
-    color: rgb(41, 145, 53);
-  
-  }
-  
-  .show:active {
-  
-    transform: scale(0.95);
-    transition: 0.1s linear;
-  
-  }
-  
-  .hideText {
-  
-    display: grid;
-    grid-template-columns: repeat(4,300px);
-    gap: 30px;
-  
-  }
-  
-  .test {
-  
-    
-    font-size: 30px;
-    font-weight: bold;
-    border-radius: 20px;
-    background-color: rgba(33, 33, 33, 0.359);
-    backdrop-filter: blur(15px);
-    padding: 10px;
-  
-    transition: all 1s ease;
-  
-  }
-  
-  #text {
-  
-    margin: 30px 0 0 0;
-  
-  }
-  
-  /*ساخت قسمت ویدیوها*/
-  
-  .video {
-  
-    display:inline-block;
-    height: 450px;
-    margin-top: 300px ;
-    padding: 15px 15px 15px 15px;
-    background-color: rgba(0, 0, 0, 0.364);
-    backdrop-filter: blur(20px);
-    border-radius: 12px 12px 25px 25px;
-    border: solid 1px rgba(140, 140, 140, 0.46);
-  
-  }
-  
-  .arcane {
-  
-    display: block;
-    width: 700px;
-    border-radius: 10px;
-  
-  }
-  
-  .selectQality-box {
-    
-    display:inline-block;
-    margin-top: 15px;
-    margin-left: 265px;
-    border-radius: 10px;
-    height: 39px;
-    position: relative;
-    left: 160px;
-    background-color: #17a9a0;
-    
-    transition: 0.5s;
-  
-  }
-  
-  .arcane1 {
-  
-    display: block;
-    margin-top: 0px;
-    padding: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    /*line-height:*/
-    letter-spacing: -0.5px;
-    color: #17a9a0;
-    background:#caffe6;
-    border:solid 0px;
-    font-family: 'Roboto',Arial, sans-serif;
-    border-radius: 10px;
-  
-    transition: 0.2s ease;
-  
-  }
-  
-  .video1080 {
-  
-    display: block;
-    pointer-events: none;
-    color: #fff;
-    padding: 5PX;
+}
+
+.command {
+
+  display: inline-block;
+  font-size: 21px;
+  color: rgba(0, 0, 0, 0.459);
+
+  /*transition:all 1s ;*/
+
+}
+
+.artBox {
+
+  display: inline-block;
+  margin: 20px 10px 20px 10px ;
+  background-color: #fff;
+  border-radius: 7px 7px 12px 12px;
+  padding-bottom: 25px;
+  
+  transition: all 0.3s;
+}
+
+.artBox:hover {
+
+  transform:translateY(-5px); 
+  
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.534);
+
+}
+
+.artsImg {
+
+  width: 340px;
+  border-radius: 7px 7px 0 0;
+  
+}
+
+@font-face {
+  font-family: ubuntu;
+  src: url(/amozesh/items/fonts/Ubuntu-Light.ttf);
+}
+@font-face {
+  font-family: ubuntuMedium;
+  src: url(/amozesh/items/fonts/Ubuntu-Medium.ttf);
+}
+@font-face {
+  font-family: ubuntuBold;
+  src: url(/amozesh/items/fonts/Ubuntu-Bold.ttf);
+}
+
+.textImg {
+
+  font-family: 'ubuntuMedium', sans-serif;
+
+  font-size: 20px;
+  margin: 15px 0 0 0;
+  color: black;
+
+}
+
+/* ساخت قسمت سوال */
+
+#sentenceMenu {
+
+  margin: 80px 30px 15px 30px;
+  background-color: rgba(255, 255, 255, 0.142);
+  backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: solid 1px rgba(255, 255, 255, 0.46);
+
+  padding: 30px 0 50px 0 ;
+
+}
+
+.inputBox {
+
+  margin: 300px;
+  display:inline-block;
+  font-family:cursive;
+  padding: 40px 25px 25px 25px;
+  background-color:rgb(255, 254, 254);
+  border: solid 1px rgba(76, 76, 76, 0.41);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px #52525277;
+  
+}
+
+.h2-inputBox {
+
+  margin: 10px 0 40px 8px;
+  text-align: left;
+  color: #000;
+  font-family: cursive;
+  font-size: 20px;
+
+}
+
+#in-the-inputBox {
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px
+
+}
+
+@import url('https://fonts.cdnfonts.com/css/gilroy-bold');
+
+input::placeholder {
+
+  color: #3a3a3a61;
+  
+}
+
+#enterName {
+
+  margin: 0 0 0px 0;
+  padding: 0 0 0 15px;
+  font-family:cursive;
+  font-weight:bold;
+  font-size: 15px;
+  width: 350px;
+  height: 45px;
+  text-align: left;
+  border-radius: 8px;
+  border: solid 0px rgb(50, 50, 255) ;
+  color: #000000;
+  background-color: #ffffff;
+  backdrop-filter: blur(10px);
+  
+  transition: 0.3s;
+
+}
+
+#enterName:hover {
+
+  transform: translateY(-3px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.445);
+
+}
+
+.makeSentence {
+
+  margin-top: 80px;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  background: rgba(198, 255, 244, 0.148);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(65, 65, 65, 0.253);
+  border: solid 1px rgba(29, 29, 29, 0.128);
+
+}
+
+.h2-sentence {
+
+  margin: 30px;
+  font-size: 20px;
+  width: 300px;
+  color: #353535;
+
+}
+
+.botton {
+
+  display: inline-block;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align:center;
+  padding: 30px;
+  background-color: rgba(100, 99, 99, 0.212);
+  backdrop-filter: blur(30px);
+  border-radius: 15px;
+  border: solid 1px;
+  border-color: rgba(255, 255, 255, 0.399);
+  -webkit-backdrop-filter: blur(30px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.567);
+  
+}
+
+.show {
+
+  display:inline-block;
+  
+  background-color: rgb(48, 173, 63);
+  font-size: 25px;
+  padding: 15px;
+  color: #fff;
+  border-radius: 10px;
+  border: solid 0px rgb(255, 255, 255);
+  
+  transition: 0.3s;
+
+}
+
+.show:hover {
+
+  background-color: #ffffff;
+  border: solid 0px rgb(255, 255, 255);
+  color: rgb(41, 145, 53);
+
+}
+
+.show:active {
+
+  transform: scale(0.95);
+  transition: 0.1s linear;
+
+}
+
+.hideText {
+
+  display: grid;
+  grid-template-columns: repeat(4,300px);
+  gap: 30px;
+
+}
+
+.test {
+
+  
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 20px;
+  background-color: rgba(33, 33, 33, 0.359);
+  backdrop-filter: blur(15px);
+  padding: 10px;
+
+  transition: all 1s ease;
+
+}
+
+#text {
+
+  margin: 30px 0 0 0;
+
+}
+
+/*ساخت قسمت ویدیوها*/
+
+.video {
+
+  display:block;
+  height: 450px;
+  width: 700px;
+  margin-top: 300px ;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px 15px 15px 15px;
+  background-color: rgba(0, 0, 0, 0.364);
+  backdrop-filter: blur(20px);
+  border-radius: 12px 12px 25px 25px;
+  border: solid 1px rgba(140, 140, 140, 0.46);
+
+}
+
+.arcane {
+
+  display: block;
+  width: 700px;
+  border-radius: 10px;
+
+}
+
+.downloadText {
+
+  font-size: 13px;
+
+}
+
+.selectQality-box {
+  
+  display:inline-block;
+  
+  margin-top: 15px;
+  margin-left: 0px;
+  border-radius: 10px;
+  padding: 0px 0px 0px 0px;
+  height: 39px;
+  position: relative;
+  left: 285px;
+  background-color: #17a9a0;
+  
+  transition: 0.5s;
+
+}
+
+.QalityButtom {
+  z-index: 1;
+  display: inline-block;
+  position:absolute;
+  left: 600px;
+  width: 100px;
+  height: 40px;
+  margin-top: 15px;
+  padding: 0px 0px 0px 0px;
+  font-size: 14px;
+  font-weight: bold;
+  /*line-height:*/
+  letter-spacing: -0.5px;
+  color: #17a9a0;
+  background:#caffe6;
+  border:solid 0px;
+  font-family: 'Roboto',Arial, sans-serif;
+  border-radius: 7px;
+
+  transition: 0.2s ease;
+
+}
+
+.video1080 {
+
+  display: inline-block;
+  pointer-events: none;
+  color: #fff;
+  padding: 5PX  25px 5px 25px;
+  opacity: 0;
+  margin-top: 50px;
+  margin-bottom: 15px;
+  text-decoration: none;
+  font-weight: bold;
+
+  transition: 0.2s;
+
+}
+
+.video720 {
+
+  display: inline-block;
+  pointer-events: none;
+  color: #fff;
+  padding: 5PX  30px 5px 30px;
+  opacity: 0;
+  margin-top: 0px;
+  text-decoration: none;
+  font-weight: bold;
+
+  transition: 0.2s;
+
+}
+
+.QalityButtom:hover{
+
+  background-color: #ecfff6;
+  transform: scale(1.05);
+
+}
+
+.QalityButtom:hover + .selectQality-box{
+
+  height: 130px;
+  
+}
+
+/* .QalityButtom:hover  .video1080{
+
+  pointer-events: auto;
+  opacity: 1;
+  
+} */
+
+.selectQality-box:hover .video1080 {
+
+  pointer-events: auto;
+  opacity: 1;
+
+}
+
+.selectQality-box:hover{
+
+  height: 140px;
+  
+}
+
+.QalityButtom:hover + .selectQality-box .video1080,
+.QalityButtom:hover + .selectQality-box .video720 {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.selectQality-box:hover .video720 {
+
+  pointer-events: auto;
+  opacity: 1;
+
+}
+
+.video1080:hover {
+
+  background-color: #caffe6;
+  color: #17a9a0;
+
+}
+
+.video720:hover {
+
+  background-color: #caffe6;
+  color: #17a9a0;
+
+}
+
+.downloadSong {
+
+  display: inline-block;
+  position: absolute;
+
+  margin-top: 15px;
+  right: 440px;
+  color: #17a9a0;
+  background:#caffe6;
+  border-radius: 10px;
+  font-size: 16px;
+  padding: 10px;
+
+  transition: 0.2s;
+
+}
+
+.downloadSong:hover {
+
+  /*padding: 10px 13px 10px 13px;*/
+  background-color: #ecfff6
+  
+}
+
+.musicArcane {
+
+  text-decoration: none;
+  color: #6085ff;
+
+}
+
+/*ساخت قسمت آهنگ*/
+
+.music {
+
+  display: inline-block;
+
+  margin: 10px 10px 30px 10px;
+  
+  padding: 10px 10px 10px 10px;
+  background-color: rgba(16, 16, 16, 0.732);
+  backdrop-filter: blur(20px);
+  border-radius: 50px;
+  border: solid 1px rgba(140, 140, 140, 0.46);
+
+}
+
+.MP4arcane {
+
+  display:inline-block;
+  
+  margin-top: 3px;
+  width: 700px;
+  height: 45px;
+  border-radius: 10px;
+  
+
+}
+
+.arcane2 {
+
+  display: block;
+  margin-top: 0;
+  
+  height: 26px;
+  padding: 10px 12px 10px 35px;
+  font-size: 20px;
+  font-weight: bold;
+  /*line-height:*/
+  letter-spacing: -0.5px;
+  color: #ffffff;
+  background: rgb(90, 218, 58);
+  box-shadow: 0px 3px 5px rgb(44, 44, 44);
+  border: 1px  solid rgba(255, 255, 255, 0.3);
+  font-family: 'Roboto',Arial, sans-serif;
+  border-radius: 5px 50px 50px 5px;
+
+  transition: 0.2s ease;
+
+}
+
+.arcane2:hover {
+
+  background-color: #ffffff;
+  color: rgb(105, 255, 68);
+  
+  padding: 10px 20px 10px 40px;
+
+}
+
+.selectMusic-box {
+
+  display:inline-block;
+  
+  position: absolute;
+  top: 241px;
+  left: 440px;
+  
+  margin-left: 15px;
+  margin-top: 5px;
+  border-radius: 23px 31px 10px 10px;
+  height: 31px;
+  
+  background-color: #048342;
+  
+  transition: 0.5s;
+
+}
+
+.q320kbps {
+
+  display: block;
+  position: relative;
+  bottom: 8px;
+  border-radius: 5px;
+  left: 0px;
+  font-size: 20px;
+  pointer-events: none;
+  color: #fff;
+  padding: 5PX;
+  opacity: 0;
+  
+  
+  text-decoration: none;
+  font-weight: bold;
+
+  transition: 0.2s;
+
+}
+
+
+.selectMusic-box:hover {
+
+  height: 100px;
+
+}
+
+.selectMusic-box:hover .q320kbps {
+
+  pointer-events: auto;
+  opacity: 1;
+
+}
+
+.q320kbps:hover {
+
+
+  background-color: #ffffff;
+  color: #13e37b;
+
+}
+
+.ali {
+
+  display: inline-block;
+  color: #3b5fff;
+  background-color: #caffe628;
+  backdrop-filter: blur(10px);
+  padding: 15px;
+  border-radius: 10px;
+
+}
+
+/*ساخت بخش اطلاعات سایت*/
+
+#about-meBox {
+
+  width: 1538px;
+  height: 300px;
+  text-align: right;
+  border-top: solid 3px rgba(255, 255, 255, 0.156);
+  
+  position: relative;
+  right: 10px;
+  top: 10px;
+  
+  background-color: #00789063;
+  backdrop-filter: blur(20px);
+
+}
+
+.about-me1 {
+
+  margin-top: 70px;
+  margin-right: 70px;
+  font-size: 15px;
+
+}
+
+.about-me2 {
+
+  position: relative;
+  left: 1260px;
+  width: 200px;
+  margin-top: 10px;
+  margin-right: 85px;
+  font-size: 13px;
+  color: rgb(202, 207, 216);
+
+}
+
+.aboutH4 {
+
+  border-right: solid 3px #17a9a0;
+  padding-right: 5px;
+  
+
+}
+
+.enable-sound-btn {
+  position: absolute;
+  top: 270px;
+  left: 460px;
+  transform: translate(-50%, -50%);
+  padding: 10px 9px 5px 11px;
+  background: rgba(105, 255, 68, 0.5);
+  
+  border: 1px  solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  backdrop-filter: blur(15px);
+  cursor: pointer;
+  z-index: 10000;
+  color: white;
+  
+  transition: all 0.3s ease;
+}
+
+.enable-sound-btn:hover {
+  background: rgba(105, 255, 68, 0.5);
+  box-shadow: 0 0 15px rgba(105, 255, 68, 0.568);
+}
+
+.enable-sound-btn.activated {
+  background: rgba(105, 255, 68, 0.15) !important;
+  border: 1px solid rgba(105, 255, 68, 0.3) !important;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: default;
+  animation: pulseGlow 2s infinite;
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 5px rgba(105, 255, 68, 0.2); }
+  50% { box-shadow: 0 0 15px rgba(105, 255, 68, 0.3); }
+  100% { box-shadow: 0 0 5px rgba(105, 255, 68, 0.2); }
+}
+
+.play {
+
+  fill:white
+
+}
+
+.pause {
+
+  fill:white
+
+}
+
+.FBodyBox {
+
+  display: block;
+
+}
+
+.bodyBox {
+
+  display:inline-block;
+
+  width: 750px;
+  height: 430px;
+
+  background: rgb(33, 33, 33);
+  border-radius: 20px;
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.186);
+  border: solid 1px rgba(225, 225, 225, 0.374);
+  
+
+  display: inline-block;
+
+}
+
+.D3 {
+
+  font-size: 35px;
+  position: absolute;
+  top: 20px;
+  left: 450px;
+
+}
+
+.threeD{
+  font-size: 38px;
+  color: rgb(105, 255, 68);
+}
+
+.glass-discription {
+
+  width: 350px;
+  display: inline-block;
+  position: absolute;
+  padding: 10px;
+  top: 120px;
+  left: 340px;
+  font-size: 16px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.186);
+  border: solid 1px rgba(225, 225, 225, 0.374);
+
+}
+
+
+.colorSoundBox {
+
+  width: 280px;
+  height: 280px;
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  box-shadow: 0px -40px 500px rgba(105, 255, 68, 0.304);
+  border-radius: 20px;
+
+}
+
+.soundBox {
+
+  background: #00000032;
+  display: block;
+  position: relative;
+  
+  margin-top: 30px;
+  margin-left: 30px;
+
+  width: 280px;
+  height: 280px;
+  /* border: solid 2px rgba(255, 255, 255, 0.507); */
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  
+  overflow: hidden;
+
+}
+
+.circle {
+  z-index: 1005;
+ 
+   width: 40px;
+   height: 40px;
+   background: radial-gradient(circle, rgba(255,255,255,0.1) 20%, rgba(173,216,230,0.5) 70%, rgba(0,0,255,0.5) 100%);
+   position:absolute;
+   border-radius: 50px;
+   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5), inset 0px 0px 10px rgba(255, 255, 255, 0.5);
+   backdrop-filter: blur(10px);
+
+ }
+
+.two {
+
+  box-shadow: 0px -40px 500px rgba(255, 68, 68, 0.304);
+
+}
+
+.threeDTwo {
+
+  color: rgb(255, 68, 68);
+
+}
+
+.bacTwo {
+
+  background-color: rgb(255, 68, 68);;
+
+}
+
+.bacTwo:hover {
+
+  color:rgb(255, 68, 68);
+
+}
+
+.bacTwo2 {
+
+  background-color: rgb(255, 68, 68, 0.5);;
+
+}
+
+.bacTwo2:hover {
+
+  background-color: rgb(255, 68, 68, 0.5);;
+  box-shadow: 0 0 15px rgba(255, 68, 68, 0.568);
+
+
+}
+
+.bacTwo3:hover {
+
+  color: rgb(255, 106, 106);;
+
+}
+
+.bacTwo4 {
+  
+  background-color: #e72222
+  
+};
+
+
+
+
+
+/*
+@keyframes sorat {
+
+  0%{ 
     opacity: 0;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    text-decoration: none;
-    font-weight: bold;
-  
-    transition: 0.2s;
-  
   }
-  
-  .video720 {
-  
-    display: block;
-    pointer-events: none;
-    color: #fff;
-    padding: 5PX;
-    opacity: 0;
-    margin-top: 0px;
-    text-decoration: none;
-    font-weight: bold;
-  
-    transition: 0.2s;
-  
-  }
-  
-  .arcane1:hover {
-  
-    background-color: #ecfff6;
-    padding: 10px 13px 10px 13px;
-  
-  }
-  
-  .selectQality-box:hover{
-  
-    height: 145px;
-    
-  }
-  
-  .selectQality-box:hover .video1080 {
-  
-    pointer-events: auto;
+  50%{
     opacity: 1;
-  
   }
-  
-  .selectQality-box:hover .video720 {
-  
-    pointer-events: auto;
+
+  100%{
     opacity: 1;
-  
   }
-  
-  .video1080:hover {
-  
-    background-color: #caffe6;
-    color: #17a9a0;
-  
-  }
-  
-  .video720:hover {
-  
-    background-color: #caffe6;
-    color: #17a9a0;
-  
-  }
-  
-  .downloadSong {
-  
-    display: inline-block;
-    position: absolute;
-  
-    margin-top: 15px;
-    right: 440px;
-    color: #17a9a0;
-    background:#caffe6;
-    border-radius: 10px;
-    font-size: 16px;
-    padding: 10px;
-  
-    transition: 0.2s;
-  
-  }
-  
-  .downloadSong:hover {
-  
-    /*padding: 10px 13px 10px 13px;*/
-    background-color: #ecfff6
-    
-  }
-  
-  .musicArcane {
-  
-    text-decoration: none;
-    color: #6085ff;
-  
-  }
-  
-  /*ساخت قسمت آهنگ*/
-  
-  .music {
-  
-    display: inline-block;
-  
-    margin: 10px 10px 30px 10px;
-    
-    padding: 10px 10px 10px 10px;
-    background-color: rgba(16, 16, 16, 0.732);
-    backdrop-filter: blur(20px);
-    border-radius: 50px;
-    border: solid 1px rgba(140, 140, 140, 0.46);
-  
-  }
-  
-  .MP4arcane {
-  
-    display:inline-block;
-    
-    margin-top: 3px;
-    width: 700px;
-    height: 45px;
-    border-radius: 10px;
-    
-  
-  }
-  
-  .arcane2 {
-  
-    display: block;
-    margin-top: 0;
-    
-    height: 26px;
-    padding: 10px 12px 10px 35px;
-    font-size: 20px;
-    font-weight: bold;
-    /*line-height:*/
-    letter-spacing: -0.5px;
-    color: #ffffff;
-    background: rgb(90, 218, 58);
-    box-shadow: 0px 3px 5px rgb(44, 44, 44);
-    border: 1px  solid rgba(255, 255, 255, 0.3);
-    font-family: 'Roboto',Arial, sans-serif;
-    border-radius: 5px 50px 50px 5px;
-  
-    transition: 0.2s ease;
-  
-  }
-  
-  .arcane2:hover {
-  
-    background-color: #ffffff;
-    color: rgb(105, 255, 68);
-    
-    padding: 10px 20px 10px 40px;
-  
-  }
-  
-  .selectMusic-box {
-  
-    display:inline-block;
-    
-    position: absolute;
-    top: 241px;
-    left: 440px;
-    
-    margin-left: 15px;
-    margin-top: 5px;
-    border-radius: 23px 31px 10px 10px;
-    height: 31px;
-    
-    background-color: #048342;
-    
-    transition: 0.5s;
-  
-  }
-  
-  .q320kbps {
-  
-    display: block;
-    position: relative;
-    bottom: 8px;
-    border-radius: 5px;
-    left: 0px;
-    font-size: 20px;
-    pointer-events: none;
-    color: #fff;
-    padding: 5PX;
-    opacity: 0;
-    
-    
-    text-decoration: none;
-    font-weight: bold;
-  
-    transition: 0.2s;
-  
-  }
-  
-  
-  .selectMusic-box:hover {
-  
-    height: 100px;
-  
-  }
-  
-  .selectMusic-box:hover .q320kbps {
-  
-    pointer-events: auto;
-    opacity: 1;
-  
-  }
-  
-  .q320kbps:hover {
-  
-  
-    background-color: #ffffff;
-    color: #13e37b;
-  
-  }
-  
-  .ali {
-  
-    display: inline-block;
-    color: #3b5fff;
-    background-color: #caffe628;
-    backdrop-filter: blur(10px);
-    padding: 15px;
-    border-radius: 10px;
-  
-  }
-  
-  /*ساخت بخش اطلاعات سایت*/
-  
-  #about-meBox {
-  
-    width: 1538px;
-    height: 300px;
-    text-align: right;
-    border-top: solid 3px rgba(255, 255, 255, 0.156);
-    
-    position: relative;
-    right: 10px;
-    top: 10px;
-    
-    background-color: #00789063;
-    backdrop-filter: blur(20px);
-  
-  }
-  
-  .about-me1 {
-  
-    margin-top: 70px;
-    margin-right: 70px;
-    font-size: 15px;
-  
-  }
-  
-  .about-me2 {
-  
-    position: relative;
-    left: 1260px;
-    width: 200px;
-    margin-top: 10px;
-    margin-right: 85px;
-    font-size: 13px;
-    color: rgb(202, 207, 216);
-  
-  }
-  
-  .aboutH4 {
-  
-    border-right: solid 3px #17a9a0;
-    padding-right: 5px;
-    
-  
-  }
-  
-  .enable-sound-btn {
-    position: absolute;
-    top: 270px;
-    left: 460px;
-    transform: translate(-50%, -50%);
-    padding: 10px 9px 5px 11px;
-    background: rgba(105, 255, 68, 0.5);
-    
-    border: 1px  solid rgba(255, 255, 255, 0.3);
-    border-radius: 50px;
-    backdrop-filter: blur(15px);
-    cursor: pointer;
-    z-index: 10000;
-    color: white;
-    
-    transition: all 0.3s ease;
-  }
-  
-  .enable-sound-btn:hover {
-    background: rgba(105, 255, 68, 0.5);
-    box-shadow: 0 0 15px rgba(105, 255, 68, 0.568);
-  }
-  
-  .enable-sound-btn.activated {
-    background: rgba(105, 255, 68, 0.15) !important;
-    border: 1px solid rgba(105, 255, 68, 0.3) !important;
-    color: rgba(255, 255, 255, 0.7);
-    cursor: default;
-    animation: pulseGlow 2s infinite;
-  }
-  
-  @keyframes pulseGlow {
-    0% { box-shadow: 0 0 5px rgba(105, 255, 68, 0.2); }
-    50% { box-shadow: 0 0 15px rgba(105, 255, 68, 0.3); }
-    100% { box-shadow: 0 0 5px rgba(105, 255, 68, 0.2); }
-  }
-  
-  .play {
-  
-    fill:white
-  
-  }
-  
-  .pause {
-  
-    fill:white
-  
-  }
-  
-  .FBodyBox {
-  
-    display: block;
-  
-  }
-  
-  .bodyBox {
-  
-    display:inline-block;
-  
-    width: 750px;
-    height: 430px;
-  
-    background: rgb(33, 33, 33);
-    border-radius: 20px;
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.186);
-    border: solid 1px rgba(225, 225, 225, 0.374);
-    
-  
-    display: inline-block;
-  
-  }
-  
-  .D3 {
-  
-    font-size: 35px;
-    position: absolute;
-    top: 20px;
-    left: 450px;
-  
-  }
-  
-  .threeD{
-    font-size: 38px;
-    color: rgb(105, 255, 68);
-  }
-  
-  .glass-discription {
-  
-    width: 350px;
-    display: inline-block;
-    position: absolute;
-    padding: 10px;
-    top: 120px;
-    left: 340px;
-    font-size: 16px;
-    background: rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.186);
-    border: solid 1px rgba(225, 225, 225, 0.374);
-  
-  }
-  
-  
-  .colorSoundBox {
-  
-    width: 280px;
-    height: 280px;
-    position: absolute;
-    left: 30px;
-    top: 30px;
-    box-shadow: 0px -40px 500px rgba(105, 255, 68, 0.304);
-    border-radius: 20px;
-  
-  }
-  
-  .soundBox {
-  
-    background: #00000032;
-    display: block;
-    position: relative;
-    
-    margin-top: 30px;
-    margin-left: 30px;
-  
-    width: 280px;
-    height: 280px;
-    /* border: solid 2px rgba(255, 255, 255, 0.507); */
-    backdrop-filter: blur(15px);
-    border-radius: 20px;
-    
-    overflow: hidden;
-  
-  }
-  
-  .circle {
-    z-index: 1005;
-   
-     width: 40px;
-     height: 40px;
-     background: radial-gradient(circle, rgba(255,255,255,0.1) 20%, rgba(173,216,230,0.5) 70%, rgba(0,0,255,0.5) 100%);
-     position:absolute;
-     border-radius: 50px;
-     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5), inset 0px 0px 10px rgba(255, 255, 255, 0.5);
-     backdrop-filter: blur(10px);
-  
-   }
-  
-  .two {
-  
-    box-shadow: 0px -40px 500px rgba(255, 68, 68, 0.304);
-  
-  }
-  
-  .threeDTwo {
-  
-    color: rgb(255, 68, 68);
-  
-  }
-  
-  .bacTwo {
-  
-    background-color: rgb(255, 68, 68);;
-  
-  }
-  
-  .bacTwo:hover {
-  
-    color:rgb(255, 68, 68);
-  
-  }
-  
-  .bacTwo2 {
-  
-    background-color: rgb(255, 68, 68, 0.5);;
-  
-  }
-  
-  .bacTwo2:hover {
-  
-    background-color: rgb(255, 68, 68, 0.5);;
-    box-shadow: 0 0 15px rgba(255, 68, 68, 0.568);
-  
-  
-  }
-  
-  .bacTwo3:hover {
-  
-    color: rgb(255, 106, 106);;
-  
-  }
-  
-  .bacTwo4 {
-    
-    background-color: #e72222
-    
-  };
-  
-  
+
+}
+*/
+
+
+
+
+
+
+/*https://fontawesome.com*/
+/*for icon*/
+
+
+
   
