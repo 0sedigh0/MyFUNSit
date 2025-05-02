@@ -10,10 +10,10 @@ function show () {
     
 if (test1.textContent/*.trim()*/ === '- - - - -' ) {
 
-    test1.innerHTML= "rakab khordi :)";
-    test2.innerHTML= "bikary :(";
-    test3.innerHTML= "ajaaaab ...";
-    test4.innerHTML= "barat motasefam :|";
+    test1.innerHTML= "empty 1";
+    test2.innerHTML= "empty 2";
+    test3.innerHTML= "empty 3";
+    test4.innerHTML= "empty 4";
     
     //number.innerHTML=sedigh.length;
 }else{
@@ -85,27 +85,84 @@ function darkMode() {
 
     }
 
-    if (body2.style.background.includes('url("/items/img/imgBackgraond/red.jpg")')) {
+    window.addEventListener('DOMContentLoaded', () => {
+        body2.classList.add('bg-day');
+    });
+    
 
-        body2.style.background = 'url("/items/img/imgBackgraond/tree.jpg") ';
-        body2.style.backgroundSize = 'cover'
-        redMode.style.background = 'rgba(210, 254, 228, 0.433)'
+    if (body2.classList.contains('bg-day')) {
+
+        body2.classList.remove('bg-day');
+        body2.classList.add('bg-night');
+
+        redMode.style.background = 'rgba(11, 80, 177, 0.17)';
+        redCard.style.background = 'rgba(21, 47, 87, 0.46)';
+        redcopy.style.background = 'rgba(23, 73, 134, 0.46)';
+        redmoon.style.background = 'rgba(23, 5, 5, 0.37)';
+        redmoon.style.border = 'solid 1px rgba(121, 121, 121, 0.46)';
+    
+    } else {
+    
+        body2.classList.remove('bg-night');
+        body2.classList.add('bg-day');
+    
+        redMode.style.background = 'rgba(210, 254, 228, 0.433)';
         redCard.style.background = 'rgba(21, 89, 125, 0.462)';
         redcopy.style.background = 'rgba(21, 89, 125, 0.662)';
         redmoon.style.background = 'rgba(210, 254, 228, 0.433)';
         redmoon.style.border = 'solid 1px rgba(121, 121, 121, 0)';
+        
+    }
+    
+
+}
+
+
+
+
+
+
+
+    /*const menuIcon=document.getElementById('menuIcon');
+
+    if (isMenuOpen) {
+
+        menuIcon.innerHTML= `
+        <g>
+	        <path d="M301.258,256.01L502.645,54.645c12.501-12.501,12.501-32.769,0-45.269c-12.501-12.501-32.769-12.501-45.269,0l0,0   L256.01,210.762L54.645,9.376c-12.501-12.501-32.769-12.501-45.269,0s-12.501,32.769,0,45.269L210.762,256.01L9.376,457.376   c-12.501,12.501-12.501,32.769,0,45.269s32.769,12.501,45.269,0L256.01,301.258l201.365,201.387   c12.501,12.501,32.769,12.501,45.269,0c12.501-12.501,12.501-32.769,0-45.269L301.258,256.01z"/>
+        </g>`;
+        isMenuOpen=true;
 
     }else{
 
-        body2.style.background = 'url("/items/img/imgBackgraond/red.jpg") center';
-        body2.style.backgroundSize = 'cover';
-        redMode.style.background = 'rgba(134, 26, 26, 0.17)';
-        redCard.style.background = 'rgba(255, 34, 34, 0.46)';
-        redcopy.style.background = 'rgba(255, 34, 34, 0.46)';
-        redmoon.style.background = 'rgba(23, 5, 5, 0.37)';
-        redmoon.style.border = 'solid 1px rgba(121, 121, 121, 0.46)';
-        aboutMe.style.background = 'rgba(102, 0, 0, 0.31)';
-    
-    }
+        menuIcon.innerHTML=
+        `<g>
+            <path d="M480,224H32c-17.673,0-32,14.327-32,32s14.327,32,32,32h448c17.673,0,32-14.327,32-32S497.673,224,480,224z"/>
+            <path d="M32,138.667h448c17.673,0,32-14.327,32-32s-14.327-32-32-32H32c-17.673,0-32,14.327-32,32S14.327,138.667,32,138.667z"/>
+            <path d="M480,373.333H32c-17.673,0-32,14.327-32,32s14.327,32,32,32h448c17.673,0,32-14.327,32-32S497.673,373.333,480,373.333z"/>
+        </g>`;
+        isMenuOpen=false;   
 
-}
+    }*/
+        /*function selectQality() {
+            // دریافت عناصر
+            const video1080 = document.querySelector('.video1080');
+            const video720 = document.querySelector('.video720');
+    
+            // تغییر مقدار opacity برای 1080
+            if (video1080.style.opacity === '0') {
+                video1080.style.opacity = '1'; // نمایش
+            } else {
+                video1080.style.opacity = '0'; // مخفی کردن
+            }
+    
+            // تغییر مقدار opacity برای 720
+            if (video720.style.opacity === '0') {
+                video720.style.opacity = '1'; // نمایش
+            } else {
+                video720.style.opacity = '0'; // مخفی کردن
+            }
+        }*/
+
+
+
