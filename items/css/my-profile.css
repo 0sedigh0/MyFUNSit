@@ -1,3 +1,13 @@
+.bg-day {
+  background: url("../img/imgBackgraond/tree.jpg") center;
+  background-size: cover;
+}
+
+.bg-night {
+  background: url("../img/imgBackgraond/night.jpg");
+  background-size: cover;
+}
+
 
 /*ساخت نوار بالای سایت */
 .navar {
@@ -239,7 +249,7 @@
   text-align: center;
   font-size: 43px;
   font-weight:bold;
-  padding: 0 0 0 20px;
+  /* padding: 0 0 0 0px; */
  
   /*هنوز این رو یاد نگرفتم*/
   font-family: monospace;
